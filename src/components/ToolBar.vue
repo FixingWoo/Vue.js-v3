@@ -1,0 +1,29 @@
+<template>
+  <div class="header">
+    <router-link to="/news">News</router-link> |
+    <router-link to="/ask">Ask</router-link> |
+    <router-link to="/jobs">Jobs</router-link> |
+    <router-link to="/items">Items</router-link> |
+    <router-link to="/users">Users</router-link>
+  </div>
+</template>
+<script>
+export default {
+  components: {}, 
+  methods: {}
+}
+</script>
+<style scope>
+  .header {
+    color: white;
+    background-color: #42b883;
+    display: flex;
+    padding: 8px;
+  }
+  .header .router-link-exact-active {
+    color: #35495e;
+  }
+  .header a {
+    color: white;
+  }
+</style>
