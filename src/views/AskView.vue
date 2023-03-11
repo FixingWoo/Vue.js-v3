@@ -1,12 +1,17 @@
 <template>
   <div>
-    <div v-for="item in this.$store.state.ask" v-bind:key="item.key">
+    <div v-for="item in fetchedAsk" v-bind:key="item.key">
       {{ item.title }}
     </div>
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
+
 export default {
+  computed: {
+    ...mapGetters(["fetchedAsk"]),
+  },
   created() {
     this.$store.dispatch("FETCH_ASK");
   },
