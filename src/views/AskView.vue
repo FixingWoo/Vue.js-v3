@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div v-for="item in fetchedAsk" v-bind:key="item.key">
-      {{ item.title }}
-    </div>
+    <p v-for="item in fetchedAsk" v-bind:key="item.id">
+      <a :href="item.url">{{ item.title }}</a>
+      <small>{{ item.time_ago }}</small>
+    </p>
   </div>
 </template>
 <script>
