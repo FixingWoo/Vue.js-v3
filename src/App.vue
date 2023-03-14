@@ -23,7 +23,14 @@ body {
   padding: 0;
   margin: 0;
 }
-
+a {
+  color: #34495e;
+  text-decoration: none;
+}
+a:hover {
+  color: #42b883;
+  text-decoration: underline;
+}
 /* Router Transition */
 .routing-fade-enter-active,
 .routing-fade-leave-active {
