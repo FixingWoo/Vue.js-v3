@@ -6,16 +6,8 @@ const config = {
 };
 
 // API 함수 정리
-function fetchNewsList() {
-  return axios.get(`${config.baseURL}/news/1.json`);
-}
-
-function fetchJobList() {
-  return axios.get(`${config.baseURL}/jobs/1.json`);
-}
-
-function fetchAskList() {
-  return axios.get(`${config.baseURL}/ask/1.json`);
+function fetchList(name) {
+  return axios.get(`${config.baseURL}/${name}/1.json`);
 }
 
 function fetchUser(userId) {
@@ -26,4 +18,4 @@ function fetchItem(itemId) {
   return axios.get(`${config.baseURL}/item/${itemId}.json`);
 }
 
-export { fetchNewsList, fetchJobList, fetchAskList, fetchUser, fetchItem };
+export { fetchUser, fetchItem, fetchList };
